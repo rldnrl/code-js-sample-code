@@ -91,3 +91,48 @@ function a() {
 
 a()
 ```
+
+## 함수 선언식과 함수 표현식
+### 함수를 선언하는 세 가지 방법
+
+```js
+function a() {}
+a()
+
+var b = function () {}
+b()
+
+var c = function d() {}
+c() // 실행
+d() // 에러
+```
+
+### 함수 선언문과 함수 표현식
+```js
+console.log(sum(1, 2))
+console.log(multiply(3, 4))
+
+function sum(a, b) {
+  return a + b
+}
+
+var multiply = function (a, b) {
+  return a * b
+}
+```
+
+### 함수 선언문과 함수 표현식 - 호이스팅 마친 후
+```js
+var sum = function sum(a, b) { // 함수 선언문은 전체를 호이스팅
+  return a + b
+}
+
+var multiply
+
+console.log(sum(1, 2))
+console.log(multiply(3, 4))
+
+multiply = function (a, b) { // 변수의 할당부는 원래 자리에 남겨둔다
+  return a * b
+}
+```
