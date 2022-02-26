@@ -18,7 +18,7 @@ var target = {
   c: 'aaa'
 }
 
-console.log(copyObjectDeep(target))
+console.log(copyObjectDeep(target)) // { a: 1, b: 2, c: 'aaa' }
 
 var deepObject = {
   a: 1,
@@ -33,4 +33,4 @@ var deepObject = {
   }
 }
 
-console.log(deepObject)
+console.log(copyObjectDeep(deepObject)) // { a: 1, b: 2, c: { d: 3, e: 4, f: { g: '123', h: true } } }
